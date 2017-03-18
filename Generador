@@ -1,0 +1,30 @@
+	//import java.util.Random; Recuerde Hacer este Import
+	//import java.util.Arrays; Recuerde Hacer este Import
+
+	int n=TamañoArray;  //numeros aleatorios
+        int k=n;  //auxiliar;
+        int[] numeros=new int[n];
+        int[] resultado=new int[n];
+        Random rnd=new Random();
+        int res;
+        
+        
+        //se rellena una matriz ordenada del 1 al TamañoArray(1..n)
+        for(int i=0;i<n;i++){
+            numeros[i]=i+1;
+        }
+        
+        for(int i=0;i<n;i++){
+            res=rnd.nextInt(k);            
+            resultado[i]=numeros[res];
+            numeros[res]=numeros[k-1];
+            k--;
+            
+        }
+
+        //se imprime el resultado;
+        System.out.println("El resultado de la matriz es:");
+
+        for(int i=0;i<n;i++){
+        	System.out.println(resultado[i]);
+	}
